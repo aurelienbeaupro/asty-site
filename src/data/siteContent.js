@@ -178,9 +178,9 @@ export const siteContent = {
       "Immeuble à restructurer, actif sous-performant ou projet complexe : ASTY peut étudier votre situation.",
     privacy:
       "Vos informations sont traitées confidentiellement et utilisées uniquement pour l’étude de votre demande.",
-    email: "contact@astyprojects.com",
+    email: "asty.community.immo@gmail.com",
     linkedinLabel: "ASTY",
-    formAction: "https://formspree.io/f/FORM_ID",
+    formAction: "https://formspree.io/f/xeerdvwj",
     projectTypes: [
       { value: "particulier", label: "Particulier" },
       { value: "agence", label: "Agence immobilière" },
