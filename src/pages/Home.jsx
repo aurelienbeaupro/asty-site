@@ -86,9 +86,26 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="content-section content-section-alt" id="intervention">
+        <div className="container">
+          <p className="section-kicker">Modes d’intervention</p>
+          <h2>{siteContent.interventionModes.title}</h2>
+          <p>{siteContent.interventionModes.intro}</p>
+          <div className="card-grid">
+            {siteContent.interventionModes.items.map((item) => (
+              <article className="info-card" key={item.title}>
+                <h3>{item.title}</h3>
+                <p>{item.body}</p>
+              </article>
+            ))}
+          </div>
+          <p>{siteContent.interventionModes.closing}</p>
+        </div>
+      </section>
+
       <section className="content-section content-section-alt" id="methode">
         <div className="container">
-          <p className="section-kicker">Methode</p>
+          <p className="section-kicker">Méthode</p>
           <h2>{siteContent.method.title}</h2>
           <div className="card-grid">
             {siteContent.method.phases.map((item) => (
@@ -104,7 +121,7 @@ export default function Home() {
 
       <section className="content-section">
         <div className="container">
-          <p className="section-kicker">Ingenierie</p>
+          <p className="section-kicker">Ingénierie</p>
           <h2>{siteContent.engineering.title}</h2>
           <p>{siteContent.engineering.intro}</p>
           <ul className="bullet-list bullet-list-columns">
@@ -146,6 +163,7 @@ export default function Home() {
                   className="media-card media-card-project"
                   style={{ backgroundImage: `url(${item.image})` }}
                 />
+                <p className="case-place">{item.mode}</p>
                 <h3>{item.title}</h3>
                 <p>{item.body}</p>
               </article>

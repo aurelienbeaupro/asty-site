@@ -9,9 +9,9 @@ export default function CaseStudies() {
           <p className="section-kicker">Études de cas</p>
           <h1>Des opérations complexes transformées en trajectoires lisibles</h1>
           <p>
-            Cette page présente un cas de requalification type et trois angles de lecture :
-            structuration, transformation et valorisation. Les noms et données peuvent être
-            adaptés selon les contraintes de confidentialité.
+            Cette page présente un cas de requalification type et plusieurs angles de lecture.
+            Les exemples ci-dessous illustrent deux logiques d’intervention : le portage direct
+            des actifs et l’accompagnement en AMO / structuration pour compte de tiers.
           </p>
         </div>
         <div className="case-visual-grid case-visual-grid-top">
@@ -45,7 +45,7 @@ export default function CaseStudies() {
           </article>
           {siteContent.projects.items.map((item) => (
             <article className="case-study-item" key={item.title}>
-              <p className="case-place">Projet</p>
+              <p className="case-place">{item.mode}</p>
               <h2>{item.title}</h2>
               <p>{item.body}</p>
             </article>

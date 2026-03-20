@@ -16,15 +16,15 @@ export const siteContent = {
   hero: {
     title: "Transformer l’ancien pour bâtir la ville de demain",
     description:
-      "ASTY est une structure indépendante spécialisée dans la structuration et le développement de projets immobiliers complexes.",
+      "ASTY est une structure indépendante spécialisée dans la structuration et le développement de projets immobiliers complexes, en portage direct ou en AMO.",
     detail:
-      "Nous intervenons principalement sur des actifs existants, en Île-de-France et en Nouvelle-Aquitaine, afin d’en révéler le potentiel économique, d’usage et territorial.",
-    primaryCta: { label: "Notre approche", href: "#methode" },
+      "Selon la situation, ASTY peut porter l’acquisition d’un actif à transformer, ou accompagner un propriétaire, une foncière ou une collectivité dans la structuration, le montage et le pilotage de sa transformation.",
+    primaryCta: { label: "Modes d’intervention", href: "#intervention" },
     secondaryCta: { label: "Études de cas", href: "/etudes-de-cas" },
     panelItems: [
-      "Structuration économique",
-      "Transformation de l’existant",
-      "Valorisation d’usage et ancrage territorial",
+      "Portage / acquisition d’actifs",
+      "AMO et structuration pour compte de tiers",
+      "Transformation et valorisation de l’existant",
     ],
   },
   manifesto: {
@@ -44,11 +44,11 @@ export const siteContent = {
     { value: "+80", label: "projets étudiés" },
     { value: "6", label: "immeubles portés en propre" },
     { value: "35", label: "lots livrés" },
-    { value: "IDF & Nouvelle-Aquitaine", label: "présence territoriale" },
+    { value: "Nouvelle-Aquitaine", label: "ancrage territorial" },
     { value: "Centre-ville ancien", label: "interventions majoritaires" },
   ],
   positioning: {
-    title: "Un opérateur spécialisé dans les situations complexes",
+    title: "Un opérateur-investisseur et AMO spécialisé dans les situations complexes",
     intro: "ASTY intervient sur des actifs présentant :",
     items: [
       "des problématiques techniques, structurelles ou de vétusté",
@@ -57,7 +57,26 @@ export const siteContent = {
       "une inadéquation d’usage",
     ],
     closing:
-      "Nous développons une approche globale permettant de transformer ces contraintes en opportunités.",
+      "Selon les besoins, ASTY se positionne soit comme opérateur capable de porter l’actif et sa transformation, soit comme AMO pour le compte d’un propriétaire, d’une foncière ou d’une collectivité.",
+  },
+  interventionModes: {
+    title: "Deux cadres d’intervention, un même niveau d’exigence",
+    intro:
+      "Le positionnement d’ASTY s’adapte au niveau d’implication recherché et au profil du dossier.",
+    items: [
+      {
+        title: "Portage / acquisition d’actifs",
+        body:
+          "ASTY peut identifier, acquérir ou co-acquérir un actif existant, structurer le véhicule de détention, sécuriser le financement et piloter la transformation jusqu’à la valorisation.",
+      },
+      {
+        title: "AMO / accompagnement de transformation",
+        body:
+          "ASTY intervient aussi aux côtés d’un propriétaire, d’une foncière ou d’une collectivité pour cadrer la stratégie, instruire la faisabilité, arbitrer le montage et suivre l’exécution opérationnelle.",
+      },
+    ],
+    closing:
+      "Dans les deux cas, notre rôle reste le même : rendre une opération complexe lisible, finançable et exécutable.",
   },
   method: {
     title: "Une approche structurée en 4 phases",
@@ -117,18 +136,21 @@ export const siteContent = {
     items: [
       {
         title: "Transformations résidentielles",
+        mode: "Portage direct",
         image: "/asty-images/kitchen-detail.jpg",
         body:
-          "Repositionnement d’immeubles existants avec amélioration énergétique et revalorisation locative.",
+          "Repositionnement d’immeubles existants avec amélioration énergétique et revalorisation locative, dans des schémas où ASTY peut porter l’actif et la transformation.",
       },
       {
         title: "Projets hybrides",
+        mode: "AMO / structuration",
         image: "/asty-images/hybrid-courtyard.jpg",
         body:
-          "Développement de projets intégrant de nouveaux usages à l’interface entre immobilier, culture et territoire.",
+          "Développement de projets intégrant de nouveaux usages à l’interface entre immobilier, culture et territoire, en accompagnement de propriétaires ou de partenaires publics et privés.",
       },
       {
         title: "AGORA (en développement)",
+        mode: "Développement en propre",
         image: "/asty-images/agora-cover.jpg",
         body:
           "Un lieu immersif dédié à la transmission des savoirs, à la croisée de la culture, de l’éducation et de l’expérience.",
@@ -146,12 +168,12 @@ export const siteContent = {
       {
         label: "Structuration",
         body:
-          "Montage en SCI, optimisation fiscale et financement structuré.",
+          "Selon le schéma retenu, portage via une SCI dédiée par ASTY ou accompagnement en AMO pour le compte du propriétaire, avec optimisation fiscale et financement structuré.",
       },
       {
         label: "Transformation",
         body:
-          "Restructuration complète, amélioration énergétique et redistribution des logements.",
+          "Pilotage de la restructuration, amélioration énergétique, redistribution des logements et coordination des intervenants.",
       },
       {
         label: "Résultat",
@@ -162,35 +184,58 @@ export const siteContent = {
   },
   partnerships: {
     title: "Une logique sélective",
-    intro: "ASTY étudie des opportunités en lien avec :",
+    intro:
+      "ASTY étudie des opportunités en lien avec des acteurs recherchant soit un portage, soit un accompagnement de transformation :",
     items: [
       "propriétaires privés",
+      "foncières et investisseurs",
       "agences immobilières",
-      "collectivites",
+      "collectivités",
       "porteurs de foncier ou friches",
     ],
     closing:
-      "Chaque projet fait l’objet d’une analyse approfondie avant engagement.",
+      "Chaque projet fait l’objet d’une analyse approfondie avant engagement, qu’il s’agisse d’une cession d’actif, d’un co-investissement ou d’une mission d’AMO.",
   },
   contact: {
     title: "Vous portez un actif à transformer ?",
     intro:
-      "Immeuble à restructurer, actif sous-performant ou projet complexe : ASTY peut étudier votre situation.",
+      "Immeuble à restructurer, actif sous-performant ou projet complexe : ASTY peut étudier votre situation, en portage direct ou dans le cadre d’une mission d’AMO.",
     privacy:
-      "Vos informations sont traitées confidentiellement et utilisées uniquement pour l’étude de votre demande.",
+      "Chaque prise de contact fait l’objet d’une première lecture confidentielle. Vos informations ne sont utilisées que pour qualifier votre demande et vous recontacter dans un cadre strictement professionnel.",
+    reassurance: [
+      "Réponse sous 48h ouvrées.",
+      "Première analyse confidentielle et sans diffusion à des tiers.",
+      "Aucun démarchage commercial ni revente de données.",
+    ],
     email: "asty.community.immo@gmail.com",
     linkedinLabel: "ASTY",
     formAction: "https://formspree.io/f/xeerdvwj",
-    projectTypes: [
-      { value: "particulier", label: "Particulier" },
+    profiles: [
+      { value: "proprietaire", label: "Propriétaire d’un immeuble" },
+      { value: "fonciere", label: "Foncière / investisseur" },
       { value: "agence", label: "Agence immobilière" },
       { value: "collectivite", label: "Collectivité" },
       { value: "foncier", label: "Foncier / friche" },
+      { value: "autre", label: "Autre" },
+    ],
+    interventionModes: [
+      { value: "portage", label: "Portage / acquisition par ASTY" },
+      { value: "amo", label: "AMO / accompagnement de transformation" },
+      { value: "mixte", label: "Schéma mixte ou à construire" },
+      { value: "adefinir", label: "À définir ensemble" },
+    ],
+    assetTypes: [
+      { value: "immeuble-ancien", label: "Immeuble ancien" },
+      { value: "actif-vacant", label: "Actif vacant" },
+      { value: "friche", label: "Friche" },
+      { value: "local-commercial", label: "Local commercial" },
+      { value: "projet-mixte", label: "Projet mixte" },
+      { value: "autre", label: "Autre" },
     ],
   },
   footer: {
     title: "ASTY",
-    strapline: "Opérateur immobilier indépendant",
-    regions: "Île-de-France & Nouvelle-Aquitaine",
+    strapline: "Portage d’actifs et AMO de transformation",
+    regions: "Nouvelle-Aquitaine",
   },
 };
