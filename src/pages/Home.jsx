@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import CounterStat from "../components/CounterStat";
 import LogoMark from "../components/LogoMark";
+import Reveal from "../components/Reveal";
 import { siteContent } from "../data/siteContent";
 
 export default function Home() {
@@ -8,7 +10,7 @@ export default function Home() {
     <>
       <section className="hero-section">
         <div className="container hero-grid">
-          <div>
+          <Reveal className="hero-copy-block">
             <p className="eyebrow">ASTY</p>
             <h1>{siteContent.hero.title}</h1>
             <p className="hero-copy">{siteContent.hero.description}</p>
@@ -21,99 +23,126 @@ export default function Home() {
                 {siteContent.hero.secondaryCta.label}
               </Link>
             </div>
-          </div>
-          <div className="hero-panel" aria-hidden="true">
+          </Reveal>
+          <Reveal className="hero-panel">
             <div className="hero-panel-card">
               <div
                 className="media-card media-card-tall"
                 style={{ backgroundImage: `url(${siteContent.imagery.heroWindow})` }}
               />
               <div className="hero-panel-note">
-                <LogoMark />
+                <LogoMark compact />
                 {siteContent.hero.panelItems.map((item) => (
                   <span key={item}>{item}</span>
                 ))}
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
 
-      <section className="content-section" id="manifeste">
-        <div className="container manifesto-grid">
-          <div className="narrow">
-            <p className="section-kicker">Manifeste</p>
-            <h2>{siteContent.manifesto.title}</h2>
-            <p>{siteContent.manifesto.intro}</p>
+      <section className="content-section">
+        <div className="container">
+          <Reveal className="section-intro section-intro-wide">
+            <p className="section-kicker">Positionnement</p>
+            <h2>{siteContent.positioning.title}</h2>
+            <p>{siteContent.positioning.intro}</p>
+          </Reveal>
+          <div className="three-grid">
+            {siteContent.positioning.cards.map((item) => (
+              <Reveal className="surface-card" key={item.title}>
+                <h3>{item.title}</h3>
+                <p>{item.body}</p>
+              </Reveal>
+            ))}
           </div>
-          <div className="manifesto-card">
-            <div
-              className="media-card media-card-wide"
-              style={{ backgroundImage: `url(${siteContent.imagery.facadeHouse})` }}
-            />
-            <ul className="bullet-list">
-              {siteContent.manifesto.points.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-            <p>{siteContent.manifesto.closing}</p>
+          <Reveal className="section-note narrow">
+            <p>{siteContent.positioning.closing}</p>
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="content-section section-alt" id="intervention">
+        <div className="container">
+          <Reveal className="section-intro">
+            <p className="section-kicker">Modes d’intervention</p>
+            <h2>{siteContent.interventionModes.title}</h2>
+            <p>{siteContent.interventionModes.intro}</p>
+          </Reveal>
+          <div className="two-grid">
+            {siteContent.interventionModes.items.map((item) => (
+              <Reveal className="surface-card surface-card-accent" key={item.title}>
+                <p className="case-place">{item.eyebrow}</p>
+                <h3>{item.title}</h3>
+                <p>{item.body}</p>
+                <ul className="bullet-list">
+                  {item.bullets.map((bullet) => (
+                    <li key={bullet}>{bullet}</li>
+                  ))}
+                </ul>
+              </Reveal>
+            ))}
           </div>
+          <Reveal className="section-note narrow">
+            <p>{siteContent.interventionModes.closing}</p>
+          </Reveal>
         </div>
       </section>
 
       <section className="metric-section">
-        <div className="container metric-grid">
-          {siteContent.metrics.map((item) => (
-            <article className="metric-card" key={item.label}>
-              <p className="metric-value">{item.value}</p>
-              <p className="metric-label">{item.label}</p>
-            </article>
-          ))}
+        <div className="container">
+          <Reveal className="section-intro section-intro-light">
+            <p className="section-kicker section-kicker-light">Chiffres clés</p>
+            <h2>Une expérience ancrée dans le réel</h2>
+          </Reveal>
+          <div className="metrics-grid">
+            {siteContent.metrics.map((item) => (
+              <Reveal key={item.label}>
+                <CounterStat
+                  label={item.label}
+                  note={item.note}
+                  prefix={item.prefix}
+                  suffix={item.suffix}
+                  text={item.text}
+                  value={item.value}
+                />
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 
       <section className="content-section">
-        <div className="container narrow">
-          <p className="section-kicker">Positionnement</p>
-          <h2>{siteContent.positioning.title}</h2>
-          <p>{siteContent.positioning.intro}</p>
-          <ul className="bullet-list">
-            {siteContent.positioning.items.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-          <p>{siteContent.positioning.closing}</p>
-        </div>
-      </section>
-
-      <section className="content-section content-section-alt" id="intervention">
         <div className="container">
-          <p className="section-kicker">Modes d’intervention</p>
-          <h2>{siteContent.interventionModes.title}</h2>
-          <p>{siteContent.interventionModes.intro}</p>
-          <div className="card-grid">
-            {siteContent.interventionModes.items.map((item) => (
-              <article className="info-card" key={item.title}>
+          <Reveal className="section-intro">
+            <p className="section-kicker">Typologies d’actifs</p>
+            <h2>{siteContent.typologies.title}</h2>
+            <p>{siteContent.typologies.intro}</p>
+          </Reveal>
+          <div className="three-grid">
+            {siteContent.typologies.items.map((item) => (
+              <Reveal className="surface-card" key={item.title}>
                 <h3>{item.title}</h3>
                 <p>{item.body}</p>
-              </article>
+              </Reveal>
             ))}
           </div>
-          <p>{siteContent.interventionModes.closing}</p>
         </div>
       </section>
 
-      <section className="content-section content-section-alt" id="methode">
+      <section className="content-section section-alt" id="methode">
         <div className="container">
-          <p className="section-kicker">Méthode</p>
-          <h2>{siteContent.method.title}</h2>
-          <div className="card-grid">
+          <Reveal className="section-intro">
+            <p className="section-kicker">Méthode</p>
+            <h2>{siteContent.method.title}</h2>
+          </Reveal>
+          <div className="timeline-grid">
             {siteContent.method.phases.map((item) => (
-              <article className="info-card" key={item.step}>
+              <Reveal className="timeline-card" key={item.step}>
                 <p className="phase-step">{item.step}</p>
                 <h3>{item.title}</h3>
                 <p>{item.body}</p>
-              </article>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -121,93 +150,49 @@ export default function Home() {
 
       <section className="content-section">
         <div className="container">
-          <p className="section-kicker">Ingénierie</p>
-          <h2>{siteContent.engineering.title}</h2>
-          <p>{siteContent.engineering.intro}</p>
-          <ul className="bullet-list bullet-list-columns">
+          <Reveal className="section-intro">
+            <p className="section-kicker">Ingénierie</p>
+            <h2>{siteContent.engineering.title}</h2>
+            <p>{siteContent.engineering.intro}</p>
+          </Reveal>
+          <div className="two-grid">
             {siteContent.engineering.items.map((item) => (
-              <li key={item}>{item}</li>
+              <Reveal className="surface-card engineering-card" key={item.title}>
+                <div className="engineering-head">
+                  <span className="badge-square">{item.tag}</span>
+                  <h3>{item.title}</h3>
+                </div>
+                <ul className="bullet-list">
+                  {item.points.map((point) => (
+                    <li key={point}>{point}</li>
+                  ))}
+                </ul>
+              </Reveal>
             ))}
-          </ul>
-          <p>{siteContent.engineering.closing}</p>
-        </div>
-      </section>
-
-      <section className="content-section content-section-alt">
-        <div className="container narrow">
-          <p className="section-kicker">Typologies d’actifs</p>
-          <h2>{siteContent.assetTypes.title}</h2>
-          <ul className="bullet-list">
-            {siteContent.assetTypes.items.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
+          </div>
+          <Reveal className="section-note narrow">
+            <p>{siteContent.engineering.closing}</p>
+          </Reveal>
         </div>
       </section>
 
       <section className="content-section">
         <div className="container">
-          <div className="section-head">
+          <Reveal className="cta-panel">
             <div>
-              <p className="section-kicker">Projets</p>
-              <h2>{siteContent.projects.title}</h2>
+              <p className="section-kicker">Contact</p>
+              <h2>{siteContent.cta.title}</h2>
+              <p>{siteContent.cta.body}</p>
             </div>
-            <Link className="text-link" to="/etudes-de-cas">
-              Voir les études de cas
-            </Link>
-          </div>
-          <div className="card-grid">
-            {siteContent.projects.items.map((item) => (
-              <article className="case-card" key={item.title}>
-                <div
-                  className="media-card media-card-project"
-                  style={{ backgroundImage: `url(${item.image})` }}
-                />
-                <p className="case-place">{item.mode}</p>
-                <h3>{item.title}</h3>
-                <p>{item.body}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="content-section content-section-alt">
-        <div className="container">
-          <p className="section-kicker">Étude de cas</p>
-          <h2>{siteContent.caseStudy.title}</h2>
-          <div className="case-visual-grid">
-            <div
-              className="media-card media-card-case"
-              style={{ backgroundImage: `url(${siteContent.imagery.interiorKitchen})` }}
-            />
-            <div
-              className="media-card media-card-case"
-              style={{ backgroundImage: `url(${siteContent.imagery.interiorBath})` }}
-            />
-          </div>
-          <div className="card-grid">
-            {siteContent.caseStudy.sections.map((item) => (
-              <article className="info-card" key={item.label}>
-                <h3>{item.label}</h3>
-                <p>{item.body}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="content-section">
-        <div className="container narrow">
-          <p className="section-kicker">Partenariats</p>
-          <h2>{siteContent.partnerships.title}</h2>
-          <p>{siteContent.partnerships.intro}</p>
-          <ul className="bullet-list">
-            {siteContent.partnerships.items.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-          <p>{siteContent.partnerships.closing}</p>
+            <div className="cta-actions">
+              <Link className="button-primary" to={siteContent.cta.primary.to}>
+                {siteContent.cta.primary.label}
+              </Link>
+              <Link className="button-secondary" to={siteContent.cta.secondary.to}>
+                {siteContent.cta.secondary.label}
+              </Link>
+            </div>
+          </Reveal>
         </div>
       </section>
     </>
