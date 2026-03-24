@@ -1,3 +1,6 @@
+const referencesBase = "/asty-images/Photos Références";
+const referenceAsset = (path) => `${referencesBase}/${path}`;
+
 export const siteContent = {
   brand: "ASTY",
   imagery: {
@@ -6,7 +9,6 @@ export const siteContent = {
     interiorBath: "/asty-images/bathroom-detail.jpg",
     interiorKitchen: "/asty-images/kitchen-detail.jpg",
     gardenHouse: "/asty-images/house-garden.jpg",
-    agoraCover: "/asty-images/agora-cover.jpg",
     hybridCourtyard: "/asty-images/hybrid-courtyard.jpg",
   },
   navigation: [
@@ -356,9 +358,241 @@ export const siteContent = {
       "L’AMO chez ASTY n’est pas une couche de conseil supplémentaire. C’est un cadre d’exécution pour faire avancer un dossier complexe.",
   },
   casesPage: {
-    title: "Réalisations / Études de cas",
+    title: "Réalisations",
     intro:
-      "Les cas présentés illustrent la manière dont ASTY structure, pilote et revalorise des situations complexes. Les données peuvent être adaptées selon les contraintes de confidentialité.",
+      "Cinq réalisations illustrent ici la manière dont ASTY porte, transforme et remet en exploitation des actifs existants. Les informations sont volontairement synthétiques pour garder une lecture claire, sans surcharger la localisation de chaque opération.",
+    aside: [
+      "5 réalisations",
+      "avant / après lorsque disponible",
+      "portage, transformation, exploitation",
+    ],
+    note:
+      "Lorsqu’une archive de chantier est disponible, la lecture avant / après est montrée de manière directe pour rendre la transformation immédiatement lisible.",
+    references: [
+      {
+        reference: "Réf. 01",
+        eyebrow: "Portage / restructuration / exploitation",
+        title: "Immeuble de 6 logements",
+        summary:
+          "Restructuration complète d’un immeuble de cœur de ville avec création de six logements et remise en trajectoire d’exploitation.",
+        scopes: ["portage direct", "restructuration lourde", "mise en exploitation"],
+        cover: referenceAsset(
+          "Portage : Restructuration : exploitation : Immeuble : création de 6 logements Immeuble coeur de ville/Photo illustration facade.png",
+        ),
+        compare: {
+          before: referenceAsset(
+            "Portage : Restructuration : exploitation : Immeuble : création de 6 logements Immeuble coeur de ville/Avant : pendant travaux/IMG_4533.jpeg",
+          ),
+          beforeLabel: "Avant / pendant travaux",
+          after: referenceAsset(
+            "Portage : Restructuration : exploitation : Immeuble : création de 6 logements Immeuble coeur de ville/Après travaux/IMG_1421.jpeg",
+          ),
+          afterLabel: "Après travaux",
+        },
+        gallery: [
+          referenceAsset(
+            "Portage : Restructuration : exploitation : Immeuble : création de 6 logements Immeuble coeur de ville/Photo illustration appart.png",
+          ),
+          referenceAsset(
+            "Portage : Restructuration : exploitation : Immeuble : création de 6 logements Immeuble coeur de ville/Photo illustration SDB.png",
+          ),
+        ],
+        details: [
+          {
+            title: "Programme",
+            body:
+              "Création d’un ensemble résidentiel de six logements à partir d’un bâti existant à reprendre dans sa structure d’usage et son niveau de qualité.",
+          },
+          {
+            title: "Intervention ASTY",
+            body:
+              "Portage de l’actif, pilotage des travaux, redistribution intérieure et mise en exploitation dans une logique de produit fini lisible.",
+          },
+          {
+            title: "Résultat",
+            body:
+              "Une opération complète, depuis le bâti en chantier jusqu’aux logements livrés, avec une amélioration sensible du confort et de la perception patrimoniale.",
+          },
+        ],
+      },
+      {
+        reference: "Réf. 02",
+        eyebrow: "Portage / rénovation / exploitation",
+        title: "Appartement restructuré",
+        summary:
+          "Rénovation complète d’un appartement ancien avec remise à niveau des usages, des finitions et de l’attractivité locative.",
+        scopes: ["rénovation complète", "reprise des pièces clés", "revalorisation à l’exploitation"],
+        cover: referenceAsset(
+          "Portage Rénovation : exploitation appartement Paris 11/Après travaux/1.jpg",
+        ),
+        compare: {
+          before: referenceAsset(
+            "Portage Rénovation : exploitation appartement Paris 11/avant travaux/Appartement 17 bld belleville Avant travaux.jpg",
+          ),
+          beforeLabel: "Avant travaux",
+          after: referenceAsset(
+            "Portage Rénovation : exploitation appartement Paris 11/Après travaux/13.jpg",
+          ),
+          afterLabel: "Après travaux",
+        },
+        gallery: [
+          referenceAsset(
+            "Portage Rénovation : exploitation appartement Paris 11/Après travaux/8.jpg",
+          ),
+          referenceAsset(
+            "Portage Rénovation : exploitation appartement Paris 11/Après travaux/2.jpg",
+          ),
+        ],
+        details: [
+          {
+            title: "Programme",
+            body:
+              "Reprise intégrale d’un appartement vétuste afin de restaurer sa cohérence d’usage et son niveau de présentation.",
+          },
+          {
+            title: "Intervention ASTY",
+            body:
+              "Pilotage de la rénovation, recomposition de la cuisine et des espaces de vie, et remise à niveau globale des finitions.",
+          },
+          {
+            title: "Résultat",
+            body:
+              "Un produit résidentiel relisible, plus qualitatif et immédiatement exploitable, avec un saut de perception net entre l’état d’origine et l’état final.",
+          },
+        ],
+      },
+      {
+        reference: "Réf. 03",
+        eyebrow: "Portage / aménagement / exploitation",
+        title: "Maison de cœur de ville",
+        summary:
+          "Aménagement et remise en valeur d’une maison de centre ancien, avec un travail sur les volumes, la lumière et le confort résidentiel.",
+        scopes: ["aménagement intérieur", "valorisation des volumes", "exploitation résidentielle"],
+        cover: referenceAsset(
+          "Portage : Aménagement : exploitation maison Coeur de ville /161b5458-a765-4dca-a989-10641cec6f00.jpeg",
+        ),
+        gallery: [
+          referenceAsset(
+            "Portage : Aménagement : exploitation maison Coeur de ville /68299304-d309-40e2-cef3-96645e1e9000.jpeg",
+          ),
+          referenceAsset(
+            "Portage : Aménagement : exploitation maison Coeur de ville /535b9fa8-49c9-40df-6184-a88f9affc400.jpeg",
+          ),
+          referenceAsset(
+            "Portage : Aménagement : exploitation maison Coeur de ville /85b64fa7-3677-4d45-651e-23f259eea500.jpeg",
+          ),
+        ],
+        details: [
+          {
+            title: "Programme",
+            body:
+              "Remise en ordre d’une maison de tissu urbain ancien avec une logique d’exploitation plus claire et plus qualitative.",
+          },
+          {
+            title: "Intervention ASTY",
+            body:
+              "Travail sur les circulations, les ambiances, les volumes habitables et la mise en cohérence de l’ensemble intérieur.",
+          },
+          {
+            title: "Résultat",
+            body:
+              "Une lecture résidentielle plus aboutie, avec un niveau de finition homogène et une meilleure valeur d’usage à l’échelle de la maison.",
+          },
+        ],
+      },
+      {
+        reference: "Réf. 04",
+        eyebrow: "Portage / restructuration / exploitation",
+        title: "Immeuble de 4 duplex",
+        summary:
+          "Transformation d’un immeuble proche gare en quatre duplex, avec séquence travaux, remise en état des parties communes et repositionnement du produit final.",
+        scopes: ["4 duplex", "travaux lourds", "mise en exploitation"],
+        cover: referenceAsset(
+          "Portage : Restructuration : exploitation : Immeuble 4 Duplex Proche gare/Commun.JPEG",
+        ),
+        compare: {
+          before: referenceAsset(
+            "Portage : Restructuration : exploitation : Immeuble 4 Duplex Proche gare/Photos des travaux/IMG_0022 2.jpeg",
+          ),
+          beforeLabel: "Phase travaux",
+          after: referenceAsset(
+            "Portage : Restructuration : exploitation : Immeuble 4 Duplex Proche gare/IMG_1727.JPEG",
+          ),
+          afterLabel: "Après travaux",
+        },
+        gallery: [
+          referenceAsset(
+            "Portage : Restructuration : exploitation : Immeuble 4 Duplex Proche gare/Appart 2 - 1.jpg",
+          ),
+          referenceAsset(
+            "Portage : Restructuration : exploitation : Immeuble 4 Duplex Proche gare/Appart 4 - 3.JPEG",
+          ),
+        ],
+        details: [
+          {
+            title: "Programme",
+            body:
+              "Recomposition d’un immeuble existant pour créer quatre duplex avec une lecture de produit plus affirmée et plus cohérente.",
+          },
+          {
+            title: "Intervention ASTY",
+            body:
+              "Pilotage de la restructuration, suivi des travaux et remise en état des espaces communs comme des plateaux privatisés.",
+          },
+          {
+            title: "Résultat",
+            body:
+              "Un ensemble requalifié, plus lisible à l’exploitation et mieux adapté à une cible résidentielle recherchée.",
+          },
+        ],
+      },
+      {
+        reference: "Réf. 05",
+        eyebrow: "Réhabilitation / transformation",
+        title: "Maison réhabilitée",
+        summary:
+          "Réhabilitation d’une maison urbaine avec lecture avant / après pour rendre visible la transformation de l’enveloppe, des volumes et de la perception finale.",
+        scopes: ["réhabilitation", "recomposition résidentielle", "mise en valeur finale"],
+        cover: referenceAsset(
+          "Rehabilitation Maison centre ville urbain/ChatGPT Image 24 mars 2026, 23_15_33.jpg",
+        ),
+        compare: {
+          before: referenceAsset(
+            "Rehabilitation Maison centre ville urbain/Avant/IMG_5119.jpeg",
+          ),
+          beforeLabel: "Avant",
+          after: referenceAsset(
+            "Rehabilitation Maison centre ville urbain/ChatGPT Image 24 mars 2026, 23_17_44.jpg",
+          ),
+          afterLabel: "Après",
+        },
+        gallery: [
+          referenceAsset(
+            "Rehabilitation Maison centre ville urbain/ChatGPT Image 24 mars 2026, 23_10_46.jpg",
+          ),
+          referenceAsset(
+            "Rehabilitation Maison centre ville urbain/Avant/IMG_5863.jpeg",
+          ),
+        ],
+        details: [
+          {
+            title: "Programme",
+            body:
+              "Réinterprétation d’une maison de ville existante pour en montrer le potentiel après intervention, sans surcharger la lecture par une fiche technique.",
+          },
+          {
+            title: "Intervention ASTY",
+            body:
+              "Lecture du bâti existant, projection de transformation et mise en visibilité d’un avant / après immédiatement compréhensible.",
+          },
+          {
+            title: "Résultat",
+            body:
+              "Une transformation rendue lisible en un coup d’œil, avec un passage clair d’un état initial hétérogène vers une image finale plus aboutie.",
+          },
+        ],
+      },
+    ],
   },
   caseStudy: {
     place: "Étude type",
@@ -402,13 +636,6 @@ export const siteContent = {
       image: "/asty-images/hybrid-courtyard.jpg",
       body:
         "Développement de projets intégrant de nouveaux usages à l’interface entre immobilier, culture et territoire, en accompagnement de propriétaires ou de partenaires publics et privés.",
-    },
-    {
-      title: "AGORA",
-      mode: "Développement en propre",
-      image: "/asty-images/agora-cover.jpg",
-      body:
-        "Un lieu immersif dédié à la transmission des savoirs, à la croisée de la culture, de l’éducation et de l’expérience.",
     },
   ],
   aboutPage: {
