@@ -12,10 +12,10 @@ export const siteContent = {
   },
   navigation: [
     { to: "/", label: "Accueil" },
+    { to: "/realisations", label: "Réalisations" },
     { to: "/expertise", label: "Expertise" },
     { to: "/criteres-de-recherche", label: "Critères de recherche" },
     { to: "/amo", label: "AMO" },
-    { to: "/realisations", label: "Réalisations" },
     { to: "/a-propos", label: "À propos" },
     { to: "/contact", label: "Contact" },
   ],
@@ -359,22 +359,39 @@ export const siteContent = {
   casesPage: {
     title: "Réalisations",
     intro:
-      "Cinq réalisations illustrent ici la manière dont ASTY porte, transforme et remet en exploitation des actifs existants. Les informations sont volontairement synthétiques pour garder une lecture claire, sans surcharger la localisation de chaque opération.",
+      "Cinq références donnent à voir la manière dont ASTY intervient sur l’existant, depuis le portage d’un actif jusqu’à sa remise en exploitation. La lecture privilégie volontairement le geste immobilier, le chantier et le résultat d’usage.",
     aside: [
       "5 réalisations",
-      "avant / après lorsque disponible",
-      "portage, transformation, exploitation",
+      "lecture avant / après lorsque disponible",
+      "présentation volontairement resserrée",
     ],
     note:
-      "Lorsqu’une archive de chantier est disponible, la lecture avant / après est montrée de manière directe pour rendre la transformation immédiatement lisible.",
+      "La page ne cherche pas l’exhaustivité. Elle montre, pour chaque actif, l’intensité de l’intervention, la transformation visible et la qualité du résultat final.",
+    readingFrame: [
+      {
+        title: "Lecture",
+        body:
+          "Chaque référence privilégie la transformation visible plutôt que l’accumulation de données techniques.",
+      },
+      {
+        title: "Confidentialité",
+        body:
+          "Les localisations précises et les paramètres d’exploitation restent volontairement en retrait.",
+      },
+      {
+        title: "Avant / après",
+        body:
+          "Quand les archives existent, l’évolution du bâti est montrée directement pour rendre le saut qualitatif immédiatement perceptible.",
+      },
+    ],
     references: [
       {
         reference: "Réf. 01",
-        eyebrow: "Portage / restructuration / exploitation",
+        eyebrow: "Portage direct et restructuration",
         title: "Immeuble de 6 logements",
         summary:
-          "Restructuration complète d’un immeuble de cœur de ville avec création de six logements et remise en trajectoire d’exploitation.",
-        scopes: ["portage direct", "restructuration lourde", "mise en exploitation"],
+          "Recomposition complète d’un immeuble ancien en six logements, avec reprise lourde du bâti et remise en exploitation.",
+        scopes: ["6 logements", "portage direct", "mise en exploitation"],
         cover: safeReferenceAsset("ref-01/cover-facade.png"),
         compare: {
           before: safeReferenceAsset("ref-01/before-works.jpeg"),
@@ -385,29 +402,29 @@ export const siteContent = {
         gallery: [safeReferenceAsset("ref-01/gallery-living.png"), safeReferenceAsset("ref-01/gallery-bath.png")],
         details: [
           {
-            title: "Programme",
+            title: "Actif",
             body:
-              "Création d’un ensemble résidentiel de six logements à partir d’un bâti existant à reprendre dans sa structure d’usage et son niveau de qualité.",
+              "Un immeuble de centre ancien à reprendre dans sa structure d’usage, son niveau de confort et sa présentation générale.",
           },
           {
-            title: "Intervention ASTY",
+            title: "Intervention",
             body:
-              "Portage de l’actif, pilotage des travaux, redistribution intérieure et mise en exploitation dans une logique de produit fini lisible.",
+              "Portage de l’actif, conduite des travaux, redistribution intérieure et mise en exploitation dans une logique de produit fini.",
           },
           {
             title: "Résultat",
             body:
-              "Une opération complète, depuis le bâti en chantier jusqu’aux logements livrés, avec une amélioration sensible du confort et de la perception patrimoniale.",
+              "Une opération lisible de bout en bout, depuis le chantier lourd jusqu’à un ensemble résidentiel cohérent, prêt à l’exploitation.",
           },
         ],
       },
       {
         reference: "Réf. 02",
-        eyebrow: "Portage / rénovation / exploitation",
-        title: "Appartement restructuré",
+        eyebrow: "Rénovation résidentielle",
+        title: "Appartement ancien restructuré",
         summary:
           "Rénovation complète d’un appartement ancien avec remise à niveau des usages, des finitions et de l’attractivité locative.",
-        scopes: ["rénovation complète", "reprise des pièces clés", "revalorisation à l’exploitation"],
+        scopes: ["rénovation complète", "pièces clés reprises", "attractivité relancée"],
         cover: safeReferenceAsset("ref-02/cover-after.jpg"),
         compare: {
           before: safeReferenceAsset("ref-02/before-main.jpg"),
@@ -418,29 +435,29 @@ export const siteContent = {
         gallery: [safeReferenceAsset("ref-02/gallery-01.jpg"), safeReferenceAsset("ref-02/gallery-02.jpg")],
         details: [
           {
-            title: "Programme",
+            title: "Actif",
             body:
-              "Reprise intégrale d’un appartement vétuste afin de restaurer sa cohérence d’usage et son niveau de présentation.",
+              "Un appartement vétuste à réordonner pour retrouver une lecture claire, une meilleure habitabilité et un niveau de présentation cohérent.",
           },
           {
-            title: "Intervention ASTY",
+            title: "Intervention",
             body:
-              "Pilotage de la rénovation, recomposition de la cuisine et des espaces de vie, et remise à niveau globale des finitions.",
+              "Pilotage de la rénovation, recomposition des pièces de vie et remise à niveau globale des finitions dans une logique de produit relisible.",
           },
           {
             title: "Résultat",
             body:
-              "Un produit résidentiel relisible, plus qualitatif et immédiatement exploitable, avec un saut de perception net entre l’état d’origine et l’état final.",
+              "Un appartement requalifié, plus qualitatif et immédiatement exploitable, avec un saut de perception net entre l’état d’origine et l’état final.",
           },
         ],
       },
       {
         reference: "Réf. 03",
-        eyebrow: "Portage / aménagement / exploitation",
+        eyebrow: "Aménagement et remise en valeur",
         title: "Maison de cœur de ville",
         summary:
-          "Aménagement et remise en valeur d’une maison de centre ancien, avec un travail sur les volumes, la lumière et le confort résidentiel.",
-        scopes: ["aménagement intérieur", "valorisation des volumes", "exploitation résidentielle"],
+          "Remise en valeur d’une maison de centre ancien, avec un travail sur les volumes, la lumière et le confort résidentiel.",
+        scopes: ["centre ancien", "travail sur les volumes", "usage résidentiel"],
         cover: safeReferenceAsset("ref-03/cover-main.jpeg"),
         gallery: [
           safeReferenceAsset("ref-03/gallery-01.jpeg"),
@@ -449,29 +466,29 @@ export const siteContent = {
         ],
         details: [
           {
-            title: "Programme",
+            title: "Actif",
             body:
-              "Remise en ordre d’une maison de tissu urbain ancien avec une logique d’exploitation plus claire et plus qualitative.",
+              "Une maison inscrite dans un tissu ancien, dont le potentiel tenait autant à la redistribution qu’à la qualité des ambiances intérieures.",
           },
           {
-            title: "Intervention ASTY",
+            title: "Intervention",
             body:
-              "Travail sur les circulations, les ambiances, les volumes habitables et la mise en cohérence de l’ensemble intérieur.",
+              "Travail sur les circulations, les volumes habitables et la cohérence d’ensemble pour retrouver une lecture résidentielle plus fluide.",
           },
           {
             title: "Résultat",
             body:
-              "Une lecture résidentielle plus aboutie, avec un niveau de finition homogène et une meilleure valeur d’usage à l’échelle de la maison.",
+              "Une maison plus aboutie dans son usage, son atmosphère et sa valeur perçue, avec une finition homogène à l’échelle de l’ensemble.",
           },
         ],
       },
       {
         reference: "Réf. 04",
-        eyebrow: "Portage / restructuration / exploitation",
-        title: "Immeuble de 4 duplex",
+        eyebrow: "Restructuration d’immeuble",
+        title: "Immeuble recomposé en 4 duplex",
         summary:
-          "Transformation d’un immeuble proche gare en quatre duplex, avec séquence travaux, remise en état des parties communes et repositionnement du produit final.",
-        scopes: ["4 duplex", "travaux lourds", "mise en exploitation"],
+          "Transformation d’un immeuble existant en quatre duplex, avec séquence travaux, reprise des parties communes et repositionnement du produit final.",
+        scopes: ["4 duplex", "reprise lourde", "repositionnement produit"],
         cover: safeReferenceAsset("ref-04/cover-common.jpeg"),
         compare: {
           before: safeReferenceAsset("ref-04/before-works.jpeg"),
@@ -482,29 +499,29 @@ export const siteContent = {
         gallery: [safeReferenceAsset("ref-04/gallery-01.jpg"), safeReferenceAsset("ref-04/gallery-02.jpeg")],
         details: [
           {
-            title: "Programme",
+            title: "Actif",
             body:
-              "Recomposition d’un immeuble existant pour créer quatre duplex avec une lecture de produit plus affirmée et plus cohérente.",
+              "Un immeuble existant à recomposer pour faire émerger une offre résidentielle plus affirmée et plus cohérente.",
           },
           {
-            title: "Intervention ASTY",
+            title: "Intervention",
             body:
               "Pilotage de la restructuration, suivi des travaux et remise en état des espaces communs comme des plateaux privatisés.",
           },
           {
             title: "Résultat",
             body:
-              "Un ensemble requalifié, plus lisible à l’exploitation et mieux adapté à une cible résidentielle recherchée.",
+              "Un ensemble requalifié, plus lisible à l’exploitation et mieux calibré pour une cible résidentielle exigeante.",
           },
         ],
       },
       {
         reference: "Réf. 05",
-        eyebrow: "Réhabilitation / transformation",
-        title: "Maison réhabilitée",
+        eyebrow: "Réhabilitation résidentielle",
+        title: "Maison urbaine réhabilitée",
         summary:
           "Réhabilitation d’une maison urbaine avec lecture avant / après pour rendre visible la transformation de l’enveloppe, des volumes et de la perception finale.",
-        scopes: ["réhabilitation", "recomposition résidentielle", "mise en valeur finale"],
+        scopes: ["avant / après lisible", "transformation résidentielle", "mise en valeur finale"],
         cover: safeReferenceAsset("ref-05/cover-render-01.jpg"),
         compare: {
           before: safeReferenceAsset("ref-05/before-main.jpeg"),
@@ -515,19 +532,19 @@ export const siteContent = {
         gallery: [safeReferenceAsset("ref-05/gallery-render-03.jpg"), safeReferenceAsset("ref-05/gallery-before-02.jpeg")],
         details: [
           {
-            title: "Programme",
+            title: "Actif",
             body:
-              "Réinterprétation d’une maison de ville existante pour en montrer le potentiel après intervention, sans surcharger la lecture par une fiche technique.",
+              "Une maison de ville existante dont le potentiel est rendu lisible par une lecture simple du bâti initial et du projet final.",
           },
           {
-            title: "Intervention ASTY",
+            title: "Intervention",
             body:
               "Lecture du bâti existant, projection de transformation et mise en visibilité d’un avant / après immédiatement compréhensible.",
           },
           {
             title: "Résultat",
             body:
-              "Une transformation rendue lisible en un coup d’œil, avec un passage clair d’un état initial hétérogène vers une image finale plus aboutie.",
+              "Une transformation lisible en un coup d’œil, avec un passage clair d’un état initial hétérogène vers une image finale plus aboutie.",
           },
         ],
       },

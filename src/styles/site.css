@@ -13,6 +13,7 @@
   --color-white: #ffffff;
   --shadow-soft: 0 24px 60px rgba(34, 71, 47, 0.08);
   --shadow-card: 0 18px 42px rgba(34, 71, 47, 0.08);
+  --shadow-card-hover: 0 28px 72px rgba(34, 71, 47, 0.12);
   --max-width: 1200px;
   --font-heading: "Georgia", "Times New Roman", serif;
   --font-body: "Helvetica Neue", Arial, sans-serif;
@@ -285,6 +286,34 @@ ul {
   font-size: 0.83rem;
 }
 
+.eyebrow,
+.section-kicker,
+.case-place {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.eyebrow::after,
+.section-kicker::after,
+.case-place::after {
+  content: "";
+  width: 2.9rem;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.35;
+  transform: scaleX(0.5);
+  transform-origin: left center;
+  transition: transform 0.45s ease, opacity 0.45s ease;
+}
+
+.reveal-visible .eyebrow::after,
+.reveal-visible .section-kicker::after,
+.reveal-visible .case-place::after {
+  opacity: 0.62;
+  transform: scaleX(1);
+}
+
 .section-kicker-light {
   color: rgba(255, 255, 255, 0.78);
 }
@@ -434,8 +463,92 @@ li {
   padding: 1.85rem;
 }
 
+.hero-panel-card,
+.surface-card,
+.metric-panel,
+.timeline-card,
+.cta-panel,
+.contact-form,
+.contact-reassurance,
+.contact-direct-card,
+.territory-list-panel,
+.reference-showcase {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transition: transform 0.42s ease, box-shadow 0.42s ease, border-color 0.32s ease,
+    background-color 0.32s ease;
+}
+
+.hero-panel-card::after,
+.surface-card::after,
+.metric-panel::after,
+.timeline-card::after,
+.cta-panel::after,
+.contact-form::after,
+.contact-reassurance::after,
+.contact-direct-card::after,
+.territory-list-panel::after,
+.reference-showcase::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.16) 0%, transparent 44%),
+    radial-gradient(circle at 84% 18%, rgba(203, 120, 61, 0.08), transparent 30%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.42s ease;
+}
+
+.hero-panel-card:hover,
+.surface-card:hover,
+.metric-panel:hover,
+.timeline-card:hover,
+.cta-panel:hover,
+.contact-form:hover,
+.contact-reassurance:hover,
+.contact-direct-card:hover,
+.territory-list-panel:hover,
+.reference-showcase:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--color-border-strong);
+}
+
+.hero-panel-card:hover::after,
+.surface-card:hover::after,
+.metric-panel:hover::after,
+.timeline-card:hover::after,
+.cta-panel:hover::after,
+.contact-form:hover::after,
+.contact-reassurance:hover::after,
+.contact-direct-card:hover::after,
+.territory-list-panel:hover::after,
+.reference-showcase:hover::after {
+  opacity: 1;
+}
+
 .hero-panel-card {
   width: min(100%, 470px);
+}
+
+.hero-panel-card::before {
+  content: "";
+  position: absolute;
+  inset: -18%;
+  background:
+    radial-gradient(circle at 20% 28%, rgba(203, 120, 61, 0.12), transparent 28%),
+    radial-gradient(circle at 76% 18%, rgba(199, 178, 109, 0.16), transparent 24%);
+  opacity: 0.85;
+  pointer-events: none;
+  animation: ambient-card-drift 10s ease-in-out infinite alternate;
+}
+
+.hero-panel-card > * {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-panel-note {
@@ -467,6 +580,20 @@ li {
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
+  transition: transform 0.95s ease, filter 0.35s ease;
+}
+
+.hero-panel-card:hover .media-card,
+.reference-primary-media:hover .reference-image,
+.reference-gallery-card:hover .reference-image,
+.reference-figure:hover .reference-image {
+  transform: scale(1.03);
+}
+
+.reference-primary-media:hover .reference-image,
+.reference-gallery-card:hover .reference-image,
+.reference-figure:hover .reference-image {
+  filter: saturate(1.03);
 }
 
 .media-card-tall {
@@ -620,6 +747,7 @@ li {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.95s ease, filter 0.35s ease;
 }
 
 .reference-detail-grid {
@@ -654,6 +782,10 @@ li {
   box-shadow: none;
 }
 
+.metric-panel:hover .metric-value {
+  transform: translateY(-1px);
+}
+
 .metric-value,
 .metric-label,
 .metric-note {
@@ -665,6 +797,7 @@ li {
   font-family: var(--font-heading);
   font-size: clamp(2.2rem, 4vw, 3.4rem);
   line-height: 0.95;
+  transition: transform 0.3s ease;
 }
 
 .metric-value-text {
@@ -1084,13 +1217,86 @@ li {
 
 .reveal {
   opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transform: translate3d(0, var(--reveal-distance, 18px), 0);
+  transition: opacity 0.58s ease, transform 0.58s ease;
+  transition-delay: var(--reveal-delay, 0ms);
 }
 
 .reveal-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.three-grid > .reveal:nth-child(1),
+.two-grid > .reveal:nth-child(1),
+.metrics-grid > .reveal:nth-child(1),
+.timeline-grid > .reveal:nth-child(1),
+.references-stack > .reveal:nth-child(1) {
+  --reveal-delay: 40ms;
+}
+
+.three-grid > .reveal:nth-child(2),
+.two-grid > .reveal:nth-child(2),
+.metrics-grid > .reveal:nth-child(2),
+.timeline-grid > .reveal:nth-child(2),
+.references-stack > .reveal:nth-child(2) {
+  --reveal-delay: 120ms;
+}
+
+.three-grid > .reveal:nth-child(3),
+.metrics-grid > .reveal:nth-child(3),
+.timeline-grid > .reveal:nth-child(3),
+.references-stack > .reveal:nth-child(3) {
+  --reveal-delay: 200ms;
+}
+
+.metrics-grid > .reveal:nth-child(4),
+.timeline-grid > .reveal:nth-child(4),
+.references-stack > .reveal:nth-child(4) {
+  --reveal-delay: 280ms;
+}
+
+.references-stack > .reveal:nth-child(5) {
+  --reveal-delay: 360ms;
+}
+
+@keyframes ambient-card-drift {
+  from {
+    transform: translate3d(-1.5%, -1.5%, 0) scale(1);
+  }
+
+  to {
+    transform: translate3d(1.5%, 1.5%, 0) scale(1.03);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-panel-card::before,
+  .territory-shell-visible .territory-list-item {
+    animation: none !important;
+  }
+
+  .reveal,
+  .button-primary,
+  .button-secondary,
+  .hero-panel-card,
+  .surface-card,
+  .metric-panel,
+  .timeline-card,
+  .cta-panel,
+  .contact-form,
+  .contact-reassurance,
+  .contact-direct-card,
+  .territory-list-panel,
+  .reference-showcase,
+  .media-card,
+  .reference-image,
+  .metric-value,
+  .eyebrow::after,
+  .section-kicker::after,
+  .case-place::after {
+    transition: none !important;
+  }
 }
 
 @media (max-width: 1120px) {
