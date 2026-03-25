@@ -1,5 +1,4 @@
-const referencesBase = "/asty-images/Photos Références";
-const referenceAsset = (path) => `${referencesBase}/${path}`;
+const safeReferenceAsset = (path) => `/asty-images/references/${path}`;
 
 export const siteContent = {
   brand: "ASTY",
@@ -376,27 +375,14 @@ export const siteContent = {
         summary:
           "Restructuration complète d’un immeuble de cœur de ville avec création de six logements et remise en trajectoire d’exploitation.",
         scopes: ["portage direct", "restructuration lourde", "mise en exploitation"],
-        cover: referenceAsset(
-          "Portage : Restructuration : exploitation : Immeuble : création de 6 logements Immeuble coeur de ville/Photo illustration facade.png",
-        ),
+        cover: safeReferenceAsset("ref-01/cover-facade.png"),
         compare: {
-          before: referenceAsset(
-            "Portage : Restructuration : exploitation : Immeuble : création de 6 logements Immeuble coeur de ville/Avant : pendant travaux/IMG_4533.jpeg",
-          ),
+          before: safeReferenceAsset("ref-01/before-works.jpeg"),
           beforeLabel: "Avant / pendant travaux",
-          after: referenceAsset(
-            "Portage : Restructuration : exploitation : Immeuble : création de 6 logements Immeuble coeur de ville/Après travaux/IMG_1421.jpeg",
-          ),
+          after: safeReferenceAsset("ref-01/after-main.jpeg"),
           afterLabel: "Après travaux",
         },
-        gallery: [
-          referenceAsset(
-            "Portage : Restructuration : exploitation : Immeuble : création de 6 logements Immeuble coeur de ville/Photo illustration appart.png",
-          ),
-          referenceAsset(
-            "Portage : Restructuration : exploitation : Immeuble : création de 6 logements Immeuble coeur de ville/Photo illustration SDB.png",
-          ),
-        ],
+        gallery: [safeReferenceAsset("ref-01/gallery-living.png"), safeReferenceAsset("ref-01/gallery-bath.png")],
         details: [
           {
             title: "Programme",
@@ -422,27 +408,14 @@ export const siteContent = {
         summary:
           "Rénovation complète d’un appartement ancien avec remise à niveau des usages, des finitions et de l’attractivité locative.",
         scopes: ["rénovation complète", "reprise des pièces clés", "revalorisation à l’exploitation"],
-        cover: referenceAsset(
-          "Portage Rénovation : exploitation appartement Paris 11/Après travaux/1.jpg",
-        ),
+        cover: safeReferenceAsset("ref-02/cover-after.jpg"),
         compare: {
-          before: referenceAsset(
-            "Portage Rénovation : exploitation appartement Paris 11/avant travaux/Appartement 17 bld belleville Avant travaux.jpg",
-          ),
+          before: safeReferenceAsset("ref-02/before-main.jpg"),
           beforeLabel: "Avant travaux",
-          after: referenceAsset(
-            "Portage Rénovation : exploitation appartement Paris 11/Après travaux/13.jpg",
-          ),
+          after: safeReferenceAsset("ref-02/after-kitchen.jpg"),
           afterLabel: "Après travaux",
         },
-        gallery: [
-          referenceAsset(
-            "Portage Rénovation : exploitation appartement Paris 11/Après travaux/8.jpg",
-          ),
-          referenceAsset(
-            "Portage Rénovation : exploitation appartement Paris 11/Après travaux/2.jpg",
-          ),
-        ],
+        gallery: [safeReferenceAsset("ref-02/gallery-01.jpg"), safeReferenceAsset("ref-02/gallery-02.jpg")],
         details: [
           {
             title: "Programme",
@@ -468,19 +441,11 @@ export const siteContent = {
         summary:
           "Aménagement et remise en valeur d’une maison de centre ancien, avec un travail sur les volumes, la lumière et le confort résidentiel.",
         scopes: ["aménagement intérieur", "valorisation des volumes", "exploitation résidentielle"],
-        cover: referenceAsset(
-          "Portage : Aménagement : exploitation maison Coeur de ville /161b5458-a765-4dca-a989-10641cec6f00.jpeg",
-        ),
+        cover: safeReferenceAsset("ref-03/cover-main.jpeg"),
         gallery: [
-          referenceAsset(
-            "Portage : Aménagement : exploitation maison Coeur de ville /68299304-d309-40e2-cef3-96645e1e9000.jpeg",
-          ),
-          referenceAsset(
-            "Portage : Aménagement : exploitation maison Coeur de ville /535b9fa8-49c9-40df-6184-a88f9affc400.jpeg",
-          ),
-          referenceAsset(
-            "Portage : Aménagement : exploitation maison Coeur de ville /85b64fa7-3677-4d45-651e-23f259eea500.jpeg",
-          ),
+          safeReferenceAsset("ref-03/gallery-01.jpeg"),
+          safeReferenceAsset("ref-03/gallery-02.jpeg"),
+          safeReferenceAsset("ref-03/gallery-03.jpeg"),
         ],
         details: [
           {
@@ -507,27 +472,14 @@ export const siteContent = {
         summary:
           "Transformation d’un immeuble proche gare en quatre duplex, avec séquence travaux, remise en état des parties communes et repositionnement du produit final.",
         scopes: ["4 duplex", "travaux lourds", "mise en exploitation"],
-        cover: referenceAsset(
-          "Portage : Restructuration : exploitation : Immeuble 4 Duplex Proche gare/Commun.JPEG",
-        ),
+        cover: safeReferenceAsset("ref-04/cover-common.jpeg"),
         compare: {
-          before: referenceAsset(
-            "Portage : Restructuration : exploitation : Immeuble 4 Duplex Proche gare/Photos des travaux/IMG_0022 2.jpeg",
-          ),
+          before: safeReferenceAsset("ref-04/before-works.jpeg"),
           beforeLabel: "Phase travaux",
-          after: referenceAsset(
-            "Portage : Restructuration : exploitation : Immeuble 4 Duplex Proche gare/IMG_1727.JPEG",
-          ),
+          after: safeReferenceAsset("ref-04/after-common.jpeg"),
           afterLabel: "Après travaux",
         },
-        gallery: [
-          referenceAsset(
-            "Portage : Restructuration : exploitation : Immeuble 4 Duplex Proche gare/Appart 2 - 1.jpg",
-          ),
-          referenceAsset(
-            "Portage : Restructuration : exploitation : Immeuble 4 Duplex Proche gare/Appart 4 - 3.JPEG",
-          ),
-        ],
+        gallery: [safeReferenceAsset("ref-04/gallery-01.jpg"), safeReferenceAsset("ref-04/gallery-02.jpeg")],
         details: [
           {
             title: "Programme",
@@ -553,27 +505,14 @@ export const siteContent = {
         summary:
           "Réhabilitation d’une maison urbaine avec lecture avant / après pour rendre visible la transformation de l’enveloppe, des volumes et de la perception finale.",
         scopes: ["réhabilitation", "recomposition résidentielle", "mise en valeur finale"],
-        cover: referenceAsset(
-          "Rehabilitation Maison centre ville urbain/ChatGPT Image 24 mars 2026, 23_15_33.jpg",
-        ),
+        cover: safeReferenceAsset("ref-05/cover-render-01.jpg"),
         compare: {
-          before: referenceAsset(
-            "Rehabilitation Maison centre ville urbain/Avant/IMG_5119.jpeg",
-          ),
+          before: safeReferenceAsset("ref-05/before-main.jpeg"),
           beforeLabel: "Avant",
-          after: referenceAsset(
-            "Rehabilitation Maison centre ville urbain/ChatGPT Image 24 mars 2026, 23_17_44.jpg",
-          ),
+          after: safeReferenceAsset("ref-05/after-render-02.jpg"),
           afterLabel: "Après",
         },
-        gallery: [
-          referenceAsset(
-            "Rehabilitation Maison centre ville urbain/ChatGPT Image 24 mars 2026, 23_10_46.jpg",
-          ),
-          referenceAsset(
-            "Rehabilitation Maison centre ville urbain/Avant/IMG_5863.jpeg",
-          ),
-        ],
+        gallery: [safeReferenceAsset("ref-05/gallery-render-03.jpg"), safeReferenceAsset("ref-05/gallery-before-02.jpeg")],
         details: [
           {
             title: "Programme",
