@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import "./styles/site.css";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+const application = (
   <React.StrictMode>
     <BrowserRouter
       future={{
@@ -14,5 +14,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     >
       <App />
     </BrowserRouter>
-  </React.StrictMode>,
+  </React.StrictMode>
 );
+
+const root = document.getElementById("root");
+if (root.hasChildNodes()) ReactDOM.hydrateRoot(root, application);
+else ReactDOM.createRoot(root).render(application);
