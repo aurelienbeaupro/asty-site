@@ -1,0 +1,6 @@
+import http from 'node:http';
+import {readFile,stat} from 'node:fs/promises';
+import path from 'node:path';
+const root=path.resolve('dist');
+const mime={'.html':'text/html; charset=utf-8','.css':'text/css','.js':'text/javascript','.svg':'image/svg+xml','.webp':'image/webp','.jpg':'image/jpeg','.ttf':'font/ttf','.woff2':'font/woff2','.xml':'application/xml','.txt':'text/plain'};
+http.createServer(async(req,res)=>{try{let route=decodeURIComponent(new URL(req.url,'http://localhost').pathname);if(route==='/etudes-de-cas'){res.writeHead(308,{Location:'/realisations'});res.end();return}let file=path.resolve(root,'.'+route);if(file!==root&&!file.startsWith(root+path.sep)){res.writeHead(403);res.end();return}let status=200;try{if((await stat(file)).isDirectory())file=path.join(file,'index.html')}catch{try{await stat(file+'.html');file+='.html'}catch{file=path.join(root,'404.html');status=404}}const data=await readFile(file);res.writeHead(status,{'Content-Type':mime[path.extname(file)]||'application/octet-stream'});res.end(data)}catch{res.writeHead(500);res.end('Erreur du serveur de prévisualisation')}}).listen(4173,'127.0.0.1',()=>console.log('ASTY — aperçu de production : http://127.0.0.1:4173'));
